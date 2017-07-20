@@ -1,0 +1,48 @@
+<html>
+
+  <body>
+    <h1>Question Game</h1>
+    <h2>Score: <span id="score"></span></h2>
+    <script>
+    // var question = {
+    // `q1: ["do u have a dog", "t"]`,
+    // `q2: ["do u have a cat", "t"]`
+    // }
+
+    // Object.keys(question)
+    // ['q1', 'q2']
+    // var q = question.q1   //["do u have a dog", "t"]
+    // q[0]
+
+      var questions = [
+        {question: 'do u have a dog?', answer: 't'},
+        {question: 'do u have a cat?', answer: 't'},
+      ]
+
+      var score = 0;
+
+      for (var i = 0; i < questions.length; i++) {
+        console.log(questions[i])
+
+        var input = prompt(questions[i].question)
+        var ans = questions[i].answer
+
+        if (input === ans) {
+          alert('CORRECT')
+          score++
+        } else {
+          alert('WRONG')
+          score--
+        }
+
+        var scoreItem = document.getElementById('score')
+        scoreItem.textContent = score
+      }
+
+    </script>
+
+
+
+
+  </body>
+</html>
